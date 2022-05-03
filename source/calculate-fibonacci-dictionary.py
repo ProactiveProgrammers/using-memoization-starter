@@ -22,23 +22,26 @@ def fibonacci(number: int) -> int:
 def fibonacci_binet(n: int) -> int:
     """Calculate a number in the Fibonacci sequence using Binet's formula."""
     # Reference:
-    # https://zeptomath.com/tools/fibonaccinumbers.php?number=150&hl=en
+    # https://zeptomath.com/tools/fibonaccinumbers.php?number=70&hl=en
     # https://artofproblemsolving.com/wiki/index.php/Binet%27s_Formula
     # https://medium.com/explorations-in-python/calculating-any-term-of-the-fibonacci-sequence-using-binets-formula-in-python-36e7e261d1d8
-    square_root_n = math.sqrt(n)
-    return int((((1 + square_root_n) ** n - (1 - square_root_n) ** n) / (2 ** n * square_root_n)))
+    square_root_five = math.sqrt(5)
+    coefficient = (1 / square_root_five)
+    first_term = ((1 + square_root_five) / 2) ** n
+    second_term = ((1 - square_root_five) / 2) ** n
+    return int(coefficient * (first_term - second_term))
 
 
 if __name__ == "__main__":
-    # request the 100th fibonacci number while using the LRU cache
-    fibonacci_value_100 = fibonacci(100)
-    print(f"Recursive fibonacci(100) = {fibonacci_value_100}")
+    # request the 35th fibonacci number while using the LRU cache
+    fibonacci_value_35 = fibonacci(35)
+    print(f"Recursive Fibonacci(35) = {fibonacci_value_35}")
     # confirm the calculation of Fibonacci number with Binet's equation
-    fibonacci_value_binet_100 = fibonacci_binet(100)
-    print(f"Binet fibonacci(100) = {fibonacci_value_100}")
-    # request the 150th fibonacci number while using the LRU cache
-    fibonacci_value_150 = fibonacci(150)
-    print(f"fibonacci(150) = {fibonacci_value_150}")
+    fibonacci_value_binet_35 = fibonacci_binet(35)
+    print(f"Binet Fibonacci(35)     = {fibonacci_value_binet_35}")
+    # request the 70th fibonacci number while using the LRU cache
+    fibonacci_value_70 = fibonacci(70)
     # confirm the calculation of Fibonacci number with Binet's equation
-    fibonacci_value_binet_150 = fibonacci_binet(150)
-    print(f"Binet fibonacci(150) = {fibonacci_value_150}")
+    fibonacci_value_binet_70 = fibonacci_binet(70)
+    print(f"Recursive Fibonacci(70) = {fibonacci_value_70}")
+    print(f"Binet Fibonacci(70)     = {fibonacci_value_binet_70}")
