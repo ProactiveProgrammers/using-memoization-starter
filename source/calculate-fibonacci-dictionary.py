@@ -39,11 +39,9 @@ if __name__ == "__main__":
     # confirm the calculation of Fibonacci number with Binet's equation
     fibonacci_value_binet_35 = fibonacci_binet(35)
     print(f"Binet Fibonacci(35)     = {fibonacci_value_binet_35}")
-    print(f"LRU cache information: {fibonacci.cache_info()}")
     # request the 70th fibonacci number while using the LRU cache
     fibonacci_value_70 = fibonacci(70)
     # confirm the calculation of Fibonacci number with Binet's equation
     fibonacci_value_binet_70 = fibonacci_binet(70)
     print(f"Recursive Fibonacci(70) = {fibonacci_value_70}")
     print(f"Binet Fibonacci(70)     = {fibonacci_value_binet_70}")
-    print(f"LRU cache information: {fibonacci.cache_info()}")
