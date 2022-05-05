@@ -15,6 +15,10 @@ TODO: Use a fenced code block to provide the output for this command.
 
 - `python calculate-fibonacci-lru-cache.py`
 
+TODO: Use a fenced code block to provide the output for this command.
+
+- `python calculate-fibonacci-dictionary.py`
+
 ## Program Questions
 
 ### What is the purpose of the following source code statement?
