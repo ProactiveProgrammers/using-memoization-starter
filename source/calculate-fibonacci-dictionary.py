@@ -21,10 +21,12 @@ def fibonacci(number: int) -> int:
 
 def fibonacci_binet(n: int) -> int:
     """Calculate a number in the Fibonacci sequence using Binet's formula."""
-    # Reference:
+    # TODO Read the following references reference:
     # https://zeptomath.com/tools/fibonaccinumbers.php?number=70&hl=en
     # https://artofproblemsolving.com/wiki/index.php/Binet%27s_Formula
     # https://medium.com/explorations-in-python/calculating-any-term-of-the-fibonacci-sequence-using-binets-formula-in-python-36e7e261d1d8
+    # TODO: Note that this function is implemented for you; however,
+    # you should make sure that you understand how this function works!
     square_root_five = math.sqrt(5)
     coefficient = (1 / square_root_five)
     first_term = ((1 + square_root_five) / 2) ** n
