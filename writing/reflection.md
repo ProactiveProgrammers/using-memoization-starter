@@ -23,7 +23,7 @@ TODO: Use a fenced code block to provide the output for this command.
 
 ### What is the purpose of the following source code statement?
 
-```
+```python
 return fibonacci(number - 1) + fibonacci(number - 2)
 ```
 
@@ -32,9 +32,20 @@ TODO: Your response to this question should explain each part of the return stat
 
 ### What is the meaning of the following source code statement?
 
-```
+```python
 print(f"LRU cache information: {fibonacci.cache_info()}")
 ```
 
 TODO: Provide at least a one-paragraph response to this question.
 TODO: Your response to this question should explain each part of the print statement.
+
+## Professional Reflection
+
+### What are the benefits and drawbacks to calculating a Fibonacci number with Binet's formula?
+
+TODO: Provide at least a one-paragraph response to this question.
+TODO: Your response to this question should explain each part of the print statement.
+
+### Using at least two sentences, what additional insights do you have to share about this project?
+
+TODO: Provide at least two sentences in your response to this question.
