@@ -1,0 +1,101 @@
+# --> check the Python program
+- source/calculate-fibonacci-lru-cache.py:
+    - description: Ensure that the calculate-fibonacci-lru-cache.py file exists in the source/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for calculate-fibonacci-lru-cache.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in calculate-fibonacci-lru-cache.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 2
+        exact: false
+    - description: Create a sufficient number of single-line comments in calculate-fibonacci-lru-cache.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 6
+        exact: false
+
+# --> check the Python program
+- source/calculate-fibonacci-dictionary.py:
+    - description: Ensure that the calculate-fibonacci-dictionary.py file exists in the source/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for calculate-fibonacci-dictionary.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in calculate-fibonacci-dictionary.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 2
+        exact: false
+    - description: Create a sufficient number of single-line comments in calculate-fibonacci-dictionary.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 6
+        exact: false
+
+# --> check the technical writing for various characteristics
+- writing/reflection.md:
+    - description: Ensure that the reflection.md file exists in the writing/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for the reflection
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the reflection file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+    - description: Confirm that the markdown file has the correct number of headers
+      check: CountMarkdownTags
+      options:
+        tag: heading
+        count: 10
+        exact: false
+    - description: Confirm that the markdown file has the correct number of fenced code blocks
+      check: CountMarkdownTags
+      options:
+        tag: code_block
+        count: 4
+        exact: false
+    - description: Write a minimum number of meaningful words (100) in the reflection
+      check: CountFileWords
+      options:
+        count: 100
+        exact: false
+
+# --> check that the number of commits in the Git repository is beyond a threshold
+- description: Have at least a specific minimum of commits in repository
+  check: CountCommits
+  options:
+    count: 5
+
+# --> check that the main command produces the correct number of output lines
+- description: Run the program and check the correct number of output lines
+  check: CountCommandOutput
+  options:
+    command: 'python source/calculate-fibonacci-lru-cache.py'
+    count: 6
+    exact: true
+
+# --> check that the main command produces the correct number of output lines
+- description: Run the program and check the correct number of output lines
+  check: CountCommandOutput
+  options:
+    command: 'python source/calculate-fibonacci-dictionary.py'
+    count: 4
+    exact: true
